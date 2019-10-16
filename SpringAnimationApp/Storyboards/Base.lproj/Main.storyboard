@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpringAnimationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNV-rZ-Qg5" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="38" width="240" height="343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJU-qi-kWj">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rJU-qi-kWj" secondAttribute="bottom" id="IlC-Sv-UOX"/>
+                                    <constraint firstItem="rJU-qi-kWj" firstAttribute="leading" secondItem="fNV-rZ-Qg5" secondAttribute="leading" id="Ng6-eG-u0O"/>
+                                    <constraint firstItem="rJU-qi-kWj" firstAttribute="top" secondItem="fNV-rZ-Qg5" secondAttribute="top" id="RVd-Le-ZuN"/>
+                                    <constraint firstAttribute="trailing" secondItem="rJU-qi-kWj" secondAttribute="trailing" id="fsl-wd-6IL"/>
+                                    <constraint firstAttribute="height" constant="343" id="rDr-6p-N80"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-Nw-U9b">
+                                <rect key="frame" x="40" y="439.5" width="240" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNextAnimation" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zr4-vn-zKc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gid-Nw-U9b" firstAttribute="width" secondItem="fNV-rZ-Qg5" secondAttribute="width" id="8Yc-RL-1tG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fNV-rZ-Qg5" secondAttribute="trailing" constant="40" id="EZS-Xx-2aN"/>
+                            <constraint firstItem="fNV-rZ-Qg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="Vlh-Hr-YWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gid-Nw-U9b" secondAttribute="bottom" multiplier="1.2" id="a9V-8S-3tB"/>
+                            <constraint firstItem="fNV-rZ-Qg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gQX-h1-xDn"/>
+                            <constraint firstItem="Gid-Nw-U9b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qx4-N5-5ih"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="rJU-qi-kWj" id="bPx-C1-MaG"/>
+                        <outlet property="showNextAnimationButton" destination="Gid-Nw-U9b" id="7gU-I6-qJ9"/>
+                        <outlet property="springAnimatiomView" destination="fNV-rZ-Qg5" id="dR4-Es-Y5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="102.46478873239437"/>
+        </scene>
+    </scenes>
+</document>
